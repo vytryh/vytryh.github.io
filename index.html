@@ -1,0 +1,86 @@
+<html lang="pl">
+
+	<head>
+	
+		<meta charset="utf-8">
+		<title>Woda</title>
+		<meta name="author" content="Mateusz 1 I/P">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="container">
+		
+			<div id="baner">
+				Źródlana woda uśmiechu doda !!!
+			</div>
+			<div id="c1" class="content">
+				<div id="form">
+					<h2> Oferta handlowa </h2>
+					<h3> Woda Kropla  --->	3 zł/1,5L</h3> 
+					<h3> Woda Bonaqua  ---> 2 zł/1,5L</h3> 		
+					<h3> Woda Cisowianka ---> 4 zł/1,5L</h3> 
+					<h3> Woda Kranowa  ---> 5 zł/1,5L</h3> 
+					<h2> Formularz zakupów </h2>
+					<form name='formularz'>
+<BR>
+<label for='typ'>Wybierz rodzaj wody: </label>
+<select id='typ' name='typ'>
+<option value='A'>Bonaqua 2 zl   </option>
+<option value='B'>Kropla 3 zl    </option>
+<option value='C'>Cisowianka 4 zl</option>
+<option value='D'>Kranowa 5 zl   </option>
+</select>
+<BR>
+
+<label for='ilosc'>Ile butelek? </label>
+<input type='number' id='ilosc' name='ilosc'>
+<BR>
+<input type='button' value='Oblicz' onclick="oblicz()">
+</form>
+
+
+Wynik: 
+<div id= "obl">
+<p id='wynik'></p>
+</div>
+<script>
+function oblicz(){
+var wynik=0;
+var typ=document.forms['formularz']['typ'].value;
+var ilosc=document.forms['formularz']['ilosc'].value;
+if(typ=='A')
+{
+wynik+=2*ilosc;
+}
+else if(typ=='B')
+{
+wynik+=3*ilosc;
+}
+else if(typ=='C')
+{
+wynik+=4*ilosc;
+}
+else if(typ=='D')
+{
+wynik+=5*ilosc;
+}
+
+document.getElementById('wynik').innerHTML=wynik;
+}
+</script>
+
+</body>
+
+</html>
+
+				</div>
+			</div>
+			<div id="c2" class="content">
+			<img src="images.jpg" width=400 height=400 />
+			</div>
+			<div id="footer">
+			
+			</div>
+		</div>
+	</body>
+</html>
